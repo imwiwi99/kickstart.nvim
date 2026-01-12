@@ -1024,3 +1024,6 @@ vim.o.tabstop = 8
 
 -- Set spell on
 vim.wo.spell = true
+
+-- Auto change directory
+vim.o.autochdir = true
