@@ -1027,3 +1027,5 @@ vim.wo.spell = true
 
 -- Auto change directory
 vim.o.autochdir = true
+
+vim.o.winborder = 'rounded'
