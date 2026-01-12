@@ -1021,3 +1021,6 @@ vim.o.shiftwidth = 4
 vim.o.smarttab = true
 vim.o.softtabstop = 0
 vim.o.tabstop = 8
+
+-- Set spell on
+vim.wo.spell = true
