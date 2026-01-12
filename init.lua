@@ -673,7 +673,21 @@ require('lazy').setup({
       local servers = {
         -- clangd = {},
         -- gopls = {},
-        pyright = {},
+        pyright = {
+          settings = {
+            pyright = {
+              -- Using Ruff's import organizer
+              disableOrganizeImports = true,
+            },
+            python = {
+              analysis = {
+                -- Ignore all files for analysis to exclusively use Ruff for linting
+                ignore = { '*' },
+              },
+            },
+          },
+        },
+        ruff = {},
         -- rust_analyzer = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --
@@ -774,7 +788,7 @@ require('lazy').setup({
         python = {
           -- [Setup | Ruff](https://docs.astral.sh/ruff/editors/setup/#neovim)
           -- To fix auto-fixable lint errors.
-          'ruff_fix',
+          -- 'ruff_fix',
           -- To run the Ruff formatter.
           'ruff_format',
           -- To organize the imports.
