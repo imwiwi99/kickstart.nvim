@@ -1014,3 +1014,10 @@ require('lazy').setup({
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
+
+-- Set tab as 4 spaces
+vim.o.expandtab = true
+vim.o.shiftwidth = 4
+vim.o.smarttab = true
+vim.o.softtabstop = 0
+vim.o.tabstop = 8
