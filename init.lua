@@ -1029,3 +1029,11 @@ vim.wo.spell = true
 vim.o.autochdir = true
 
 vim.o.winborder = 'rounded'
+
+vim.api.nvim_create_autocmd('BufEnter', {
+  callback = function()
+    if vim.bo.buftype == '' and vim.bo.filetype == '' then
+      vim.bo.filetype = 'markdown'
+    end
+  end,
+})
